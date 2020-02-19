@@ -13,7 +13,7 @@ class SingleApplicationConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type", "os_build", "arch_build"
     options = {"BaseClass": ["QCoreApplication", "QGuiApplication", "QApplication"]}
     default_options = "BaseClass=QCoreApplication", "Qt:openssl=True"
-    requires = [("Qt/5.12.4@tereius/stable", "private")]
+    requires = [("Qt/[>=5.4]@tereius/stable")]
     generators = "cmake"
 
     def source(self):
